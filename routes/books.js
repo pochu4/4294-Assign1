@@ -2,10 +2,12 @@ const express = require ("express");
 // Create new set of routes
 const router = express.Router();
 
+// Previously had /public/imagename 
+// But this is now redundant due to the express.static line in appjs
 const books = [
-    { id: 1, title: "The Lightning Thief", author: "Rick Riordan", imageUrl: "/public/lightning-thief.jpg", year: "2005" },
-    { id: 2, title: "The Sea of Monsters", author: "Rick Riordan", imageUrl: "/public/sea-of-monsters.jpg", year: "2006" },
-    { id: 3, title: "The Titan's Curse", author: "Rick Riordan", imageUrl: "/public/titans-curse.jpg", year: "2007" },
+    { id: 1, title: "The Lightning Thief", author: "Rick Riordan", imageUrl: "/lightning-thief.jpg", year: "2005" },
+    { id: 2, title: "The Sea of Monsters", author: "Rick Riordan", imageUrl: "/sea-of-monsters.jpg", year: "2006" },
+    { id: 3, title: "The Titan's Curse", author: "Rick Riordan", imageUrl: "/titans-curse.jpg", year: "2007" },
 ]
 
 // Find and reutnr book
